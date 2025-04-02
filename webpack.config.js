@@ -17,23 +17,20 @@ module.exports = {
                 loader: "html-loader",
             },
             {
-                test: /\.(sa|sc|c)ss$/i,
+
+                test: /\.(sass|css|scss)$/,
+    
                 use: [
-                    MiniCssExtractPlugin.loader,
-                    "css-loader",
-                    {
-                        loader: "postcss-loader",
-                        options: {
-                            postcssOptions: {
-                                plugins: [
-                                    require("autoprefixer"),
-                                ],
-                            },
-                        },
-                    },
-                    "sass-loader",
+    
+                  MiniCssExtractPlugin.loader,
+    
+                  "css-loader",
+    
+                  "sass-loader",
+    
                 ],
-            },
+    
+              },    
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
                 type: 'asset/resource',
@@ -64,9 +61,10 @@ module.exports = {
         }
     },
     plugins: [
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+        new OptimizeCSSAssetsPlugin({}),
         new MiniCssExtractPlugin({
-            filename: "assets/css/style.css",
+            filename: "assets/css/style.css"
         }),
         new HtmlWebpackPlugin({
             filename: "index.html",
