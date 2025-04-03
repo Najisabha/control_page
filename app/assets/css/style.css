@@ -4,3 +4,7 @@
 :root {
   --color-chartbrand: #2541b2;
 }
+
+body {
+  background-color: #343434;
+}
