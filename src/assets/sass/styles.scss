@@ -1,18 +1,18 @@
-@use "./config/variables" as *;
-@use "./config/layout" as *;
-@use "./config/colors" as *;
+@use "../config/variables" as *;
+@use "../config/layout" as *;
+@use "../config/colors" as *;
 
-@use "./utilities/spacing" as *;
-@use "./utilities/mixin-card" as *;
+@use "../utilities/spacing" as *;
+@use "../utilities/mixin-card" as *;
 
-@use "./base/fonts" as *;
-@use "./base/global" as *;
-@use "./base/typography" as *;
-@use "./base/links" as *;
+@use "../base/fonts" as *;
+@use "../base/global" as *;
+@use "../base/typography" as *;
+@use "../base/links" as *;
 
-@use "./components/components" as *;
-@use "./components/demo" as * ;
-@use "./pages/index" as *;
-@use "./pages/single-page" as *;
+@use "../components/components" as *;
+@use "../components/demo" as * ;
+@use "../pages/index" as *;
+@use "../pages/single-page" as *;
 
-@use "./hacks/add-product"  as *;
+@use "../hacks/add-product"  as *;
