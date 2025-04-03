@@ -1,1 +1,1 @@
-console.log("hello word");
+import './assets/sass/style.scss';

@@ -2,12 +2,13 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+
 module.exports = {
     mode: "development",
     entry: "./src/index.js",
     output: {
-        path: path.resolve(__dirname, "app"), // ✅ تصحيح المسار
+        path: path.resolve(__dirname, "app"),
         filename: "app.js"
     },
     module: {
@@ -17,20 +18,13 @@ module.exports = {
                 loader: "html-loader",
             },
             {
-
                 test: /\.(sass|css|scss)$/,
-    
                 use: [
-    
-                  MiniCssExtractPlugin.loader,
-    
-                  "css-loader",
-    
-                  "sass-loader",
-    
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "sass-loader",
                 ],
-    
-              },    
+            },
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
                 type: 'asset/resource',
@@ -52,17 +46,19 @@ module.exports = {
         ]
     },
     devServer: {
-        static: path.join(__dirname, "app"), // ✅ استبدال contentBase بـ static
+        static: path.join(__dirname, "app"),
         compress: true,
         port: 8081,
         open: true,
         devMiddleware: {
-            writeToDisk: true // ✅ إصلاح writeToDisk
+            writeToDisk: true
         }
+    },
+    optimization: {
+        minimizer: [new CssMinimizerPlugin()],
     },
     plugins: [
         new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
-        new OptimizeCSSAssetsPlugin({}),
         new MiniCssExtractPlugin({
             filename: "assets/css/style.css"
         }),
@@ -70,25 +66,5 @@ module.exports = {
             filename: "index.html",
             template: "./src/index.html",
         }),
-        // new HtmlWebpackPlugin({
-        //     filename: "orders.html",
-        //     template: "./src/orders.html",
-        // }),
-        // new HtmlWebpackPlugin({
-        //     filename: "products.html",
-        //     template: "./src/products.html",
-        // }),
-        // new HtmlWebpackPlugin({
-        //     filename: "user.html",
-        //     template: "./src/user.html",
-        // }),
-        // new HtmlWebpackPlugin({
-        //     filename: "add-product.html",
-        //     template: "./src/add-product.html",
-        // }),
-        // new HtmlWebpackPlugin({
-        //     filename: "add-user.html",
-        //     template: "./src/add-user.html",
-        // }),
     ]
 };
