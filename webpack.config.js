@@ -46,21 +46,25 @@ module.exports = {
         ]
     },
     devServer: {
-        static: path.join(__dirname, "app"),
+        static: path.join(__dirname, 'app'),
         compress: true,
         port: 8081,
         open: true,
         devMiddleware: {
-            writeToDisk: true
-        }
-    },
-    optimization: {
-        minimizer: [new CssMinimizerPlugin()],
-    },
+          writeToDisk: true,
+        },
+        client: {
+          overlay: {
+            errors: true,
+            warnings: false,
+            runtimeErrors: true,
+          },
+        },
+      },    
     plugins: [
         new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
         new MiniCssExtractPlugin({
-            filename: "assets/css/style.css"
+            filename: "assets/css/styles.css"
         }),
         new HtmlWebpackPlugin({
             filename: "index.html",

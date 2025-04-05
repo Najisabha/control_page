@@ -1,18 +1,18 @@
-@use "../sass/config/variables" as *;
-@use "../sass/config/layout" as *;
-@use "../sass/config/colors" as *;
+@use '../sass/config/variables' as *;
+@use '../sass/config/layout' as *;
+@use '../sass/config/colors' as *;
 
-@use "../sass/utilities/mixin-card" as *;
-// @use "../sass/utilities/spacing" as *;
+@import '../sass/utilities/mixin-card';
+@import '../sass/utilities/spacing';
 
-// @use "../sass/base/fonts" as *;
-// @use "../sass/base/global" as *;
-// @use "../sass/base/typography" as *;
-// @use "../sass/base/links" as *;
+@import '../sass/base/fonts';
+@import '../sass/base/global';
+@import '../sass/base/typography';
+@import '../sass/base/links';
 
-// @use "../sass/components/components" as *;
-// @use "../sass/components/demo" as * ;
-// @use "../sass/pages/index" as *;
-// @use "../sass/pages/single-page" as *;
+@import '../sass/components/components';
+@import '../sass/components/demo';
+@import '../sass/pages/index';
+@import '../sass/pages/single-page';
 
-// @use "../sass/hacks/add-product"  as *;
+@import '../sass/hacks/add-product';
