@@ -64,7 +64,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
         new MiniCssExtractPlugin({
-            filename: "assets/css/styles.css"
+            filename: "assets/css/style.css"
         }),
         new HtmlWebpackPlugin({
             filename: "index.html",
