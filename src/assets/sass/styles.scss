@@ -2,8 +2,8 @@
 @use '../sass/config/layout' as *;
 @use '../sass/config/colors' as *;
 
-@import '../sass/utilities/mixin-card';
-@import '../sass/utilities/spacing';
+@import './utilities/mixin-card.scss';
+@import '.utilities/spacing';
 
 @import '../sass/base/fonts';
 @import '../sass/base/global';
