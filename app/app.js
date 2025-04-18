@@ -794,14 +794,14 @@ eval("/** @typedef {\"info\" | \"warning\" | \"error\"} LogLevel */\n\n/** @type
 
 /***/ }),
 
-/***/ "./src/assets/sass/style.scss":
-/*!************************************!*\
-  !*** ./src/assets/sass/style.scss ***!
-  \************************************/
+/***/ "./src/assets/sass/styles.scss":
+/*!*************************************!*\
+  !*** ./src/assets/sass/styles.scss ***!
+  \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://control-panel/./src/assets/sass/style.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://control-panel/./src/assets/sass/styles.scss?");
 
 /***/ }),
 
@@ -812,7 +812,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_sass_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/sass/style.scss */ \"./src/assets/sass/style.scss\");\n/* harmony import */ var normalize_css_normalize_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! normalize.css/normalize.css */ \"./node_modules/normalize.css/normalize.css\");\n\n\n\n//# sourceURL=webpack://control-panel/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_sass_styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/sass/styles.scss */ \"./src/assets/sass/styles.scss\");\n/* harmony import */ var normalize_css_normalize_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! normalize.css/normalize.css */ \"./node_modules/normalize.css/normalize.css\");\n\n\nconsole.log(\"hello from webpack\");\n\n//# sourceURL=webpack://control-panel/./src/index.js?");
 
 /***/ }),
 
